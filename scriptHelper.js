@@ -41,8 +41,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             let launchStatus = document.querySelector("h2[id=launchStatus]");
 
             list.style.visibility = "hidden";
-            pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
-            copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
+            pilotStatus.innerHTML = `Pilot ${pilot} checked and ready for launch`;
+            copilotStatus.innerHTML = `Co-pilot ${copilot} checked and ready for launch`;
 
        if (Number(fuelLevel) >= 10000) {
             fuelStatus.innerHTML = `Fuel levels adequate for launch`;
@@ -76,8 +76,8 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 
        if (Number(cargoLevel) <= 10000 && Number(fuelLevel) >= 10000) {
             list.style.visibility = "visible";
-            fuelStatus.innerHTML = `Fuel level high enough for launch`;
-            cargoStatus.innerHTML = `Cargo mass low enough for launch`;
+            fuelStatus.innerHTML = `Fuel levels adequate for launch`;
+            cargoStatus.innerHTML = `Cargo mass ideal;ready for launch`;
             launchStatus.style.color = "rgb(65, 159, 106)";
             launchStatus.innerHTML = `Shuttle is Ready for Launch`;
     
