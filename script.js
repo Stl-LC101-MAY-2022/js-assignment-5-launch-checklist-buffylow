@@ -41,29 +41,29 @@ window.addEventListener("load", function() {
             list.style.visibility = "hidden";
 
             if (pilotName.value === '' || copilotName.value === '' || fuelLevel.value === '' || cargoMass.value === ''){
-                alert("All fields are required!");
+                alert("All fields are required");
 
                 event.preventDefault();
 
            return;
             } else if (validateInput(pilotName.value) === "Is a Number") {
         
-            alert("Make sure to enter valid information for each field!");
+            alert("Make sure to enter valid information for each field");
             
             event.preventDefault();
             return;
         } else if (validateInput(copilotName.value) === "Is a Number") {
-            alert("Make sure to enter valid information for each field!");
+            alert("Make sure to enter valid information for each field");
             
             event.preventDefault();
             return;
         } else if (validateInput(fuelLevel.value) !== "Is a Number") {
-            alert("Make sure to enter valid information for each field!");
+            alert("Make sure to enter valid information for each field");
             
             event.preventDefault();
             return;
         } else if (validateInput(cargoMass.value) === "Not a Number") {
-            alert("Make sure to enter valid information for each field!");
+            alert("Make sure to enter valid information for each field");
             
             event.preventDefault();
             return;
@@ -72,13 +72,13 @@ window.addEventListener("load", function() {
             let copilotStatus = window.document.querySelector("li[id=copilotStatus]");
             let pilotName = window.document.querySelector("input[name=pilotName]");
             let copilotName = window.document.querySelector("input[name=copilotName]");
+            
             let cargoMass = window.document.querySelector("input[name=cargoMass]");
 
             formSubmission(window.document, list, pilotName.value, copilotName.value, fuelLevel.value, cargoMass.value);
 
             event.preventDefault();
         }
-
    });
    
 });
