@@ -58,7 +58,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
            list.style.visibility = "visible";
            cargoStatus.innerHTML = `Cargo mass too excessive for launch`;
            launchStatus.innerHTML = `Shuttle Not Ready for Launch`;
-           launchStatus.style.color = "rgb(199, 37, 78)";
+           launchStatus.style.color = "red";
         
         }
 
@@ -68,7 +68,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             list.style.visibility = "visible";
             fuelStatus.innerHTML = `Fuel levels inadequate for launch`;
             launchStatus.innerHTML = `Shuttle Not Ready for Launch`;
-            launchStatus.style.color = "rgb(199, 37, 78)";
+            launchStatus.style.color = "red";
 
                    
        }
@@ -78,24 +78,23 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
             list.style.visibility = "visible";
             fuelStatus.innerHTML = `Fuel levels adequate for launch`;
             cargoStatus.innerHTML = `Cargo mass ideal;ready for launch`;
-            launchStatus.style.color = "rgb(65, 159, 106)";
+            launchStatus.style.color = "red";
             launchStatus.innerHTML = `Shuttle is Ready for Launch`;
     
        }
 
     return list;
 }
+// the await and(.then) onFulfilled: This is a function that is called upon the success of the promise. 
 
 async function myFetch() {
     let planetsReturned;
-
     planetsReturned = await fetch("https://handlers.education.launchcode.org/static/planets.json").then( function(response) {
             return response.json();
         });
-
     return planetsReturned;
 }
-// choosing random planet from index in JSON
+// choosing random planet from index in JSON, using index as a return variable with function guts to get results 
 function pickPlanet(planets) {
     let index = Math.floor(Math.random() * planets.length);
     
